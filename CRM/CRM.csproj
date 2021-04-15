@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F408388D-8E4F-490A-8AF5-E7E7386BBBD4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRM</RootNamespace>
+    <AssemblyName>CRM</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="FormBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FormBase.dll</HintPath>
+    </Reference>
+    <Reference Include="NotificationWindow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NotificationWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XPanderControl, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Sanoop U - Copy\KALOLTSAV\KALOLTSAV\bin\Debug\XPanderControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BLL\ClsBllCompanyDetails.cs" />
+    <Compile Include="Classes\BLL\ClsBllCustomerMaster.cs" />
+    <Compile Include="Classes\BLL\ClsBllEmployeeMaster.cs" />
+    <Compile Include="Classes\BLL\ClsBllEventMaster.cs" />
+    <Compile Include="Classes\BLL\ClsBllEventMasterReport.cs" />
+    <Compile Include="Classes\BLL\ClsBllLoginMaster.cs" />
+    <Compile Include="Classes\BLL\ClsBllProductMaster.cs" />
+    <Compile Include="Classes\BLL\ClsBllRemainderMaster.cs" />
+    <Compile Include="Classes\BLL\ClsBllServiceEntry.cs" />
+    <Compile Include="Classes\BLL\ClsBllServiceRegistration.cs" />
+    <Compile Include="Classes\BLL\ClsBllServiceRegistrationReport.cs" />
+    <Compile Include="Classes\BLL\ClsBllSeviceScheduleMaster.cs" />
+    <Compile Include="Classes\BLL\ClsBllUserMaster.cs" />
+    <Compile Include="Classes\DAL\ClsDalCompanyDetails.cs" />
+    <Compile Include="Classes\DAL\ClsDalCustomerMaster.cs" />
+    <Compile Include="Classes\DAL\ClsDalEmployeeMaster.cs" />
+    <Compile Include="Classes\DAL\ClsDalEventMaster.cs" />
+    <Compile Include="Classes\DAL\ClsDalEventMasterReport.cs" />
+    <Compile Include="Classes\DAL\ClsdalLoginMaster.cs" />
+    <Compile Include="Classes\DAL\ClsDalProductMaster.cs" />
+    <Compile Include="Classes\DAL\ClsDalRemainderMaster.cs" />
+    <Compile Include="Classes\DAL\ClsDalServiceEntry.cs" />
+    <Compile Include="Classes\DAL\ClsDalServiceRegistration.cs" />
+    <Compile Include="Classes\DAL\ClsDalServiceRegistrationReport.cs" />
+    <Compile Include="Classes\DAL\ClsDalSeviceScheduleMaster.cs" />
+    <Compile Include="Classes\DAL\ClsDalUserMaster.cs" />
+    <Compile Include="Finished Forms\CompanyDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\CompanyDetails.designer.cs">
+      <DependentUpon>CompanyDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\CustomerMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\CustomerMaster.designer.cs">
+      <DependentUpon>CustomerMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\EmployeeMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\EmployeeMaster.designer.cs">
+      <DependentUpon>EmployeeMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\EventMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\EventMaster.designer.cs">
+      <DependentUpon>EventMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\FrmEventMasterReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\FrmEventMasterReport.designer.cs">
+      <DependentUpon>FrmEventMasterReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\FrmMenuStrip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\FrmMenuStrip.designer.cs">
+      <DependentUpon>FrmMenuStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\FrmRemainderMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\FrmRemainderMaster.designer.cs">
+      <DependentUpon>FrmRemainderMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\FrmSeviceRegistrationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\FrmSeviceRegistrationReport.designer.cs">
+      <DependentUpon>FrmSeviceRegistrationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\LoginMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\LoginMaster.Designer.cs">
+      <DependentUpon>LoginMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\ProductMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\ProductMaster.designer.cs">
+      <DependentUpon>ProductMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\ServiceEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\ServiceEntry.designer.cs">
+      <DependentUpon>ServiceEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\ServiceRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\ServiceRegistration.designer.cs">
+      <DependentUpon>ServiceRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\ServiceScheduleMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\ServiceScheduleMaster.designer.cs">
+      <DependentUpon>ServiceScheduleMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finished Forms\UserMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finished Forms\UserMaster.Designer.cs">
+      <DependentUpon>UserMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CrpEventReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpEventReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmEventReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmEventReportViewer.Designer.cs">
+      <DependentUpon>FrmEventReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Finished Forms\CompanyDetails.resx">
+      <DependentUpon>CompanyDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\CustomerMaster.resx">
+      <DependentUpon>CustomerMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\EmployeeMaster.resx">
+      <DependentUpon>EmployeeMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\EventMaster.resx">
+      <DependentUpon>EventMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\FrmEventMasterReport.resx">
+      <DependentUpon>FrmEventMasterReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\FrmMenuStrip.resx">
+      <DependentUpon>FrmMenuStrip.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\FrmRemainderMaster.resx">
+      <DependentUpon>FrmRemainderMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\FrmSeviceRegistrationReport.resx">
+      <DependentUpon>FrmSeviceRegistrationReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\LoginMaster.resx">
+      <DependentUpon>LoginMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\ProductMaster.resx">
+      <DependentUpon>ProductMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\ServiceEntry.resx">
+      <DependentUpon>ServiceEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\ServiceRegistration.resx">
+      <DependentUpon>ServiceRegistration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\ServiceScheduleMaster.resx">
+      <DependentUpon>ServiceScheduleMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finished Forms\UserMaster.resx">
+      <DependentUpon>UserMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrpEventReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpEventReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmEventReportViewer.resx">
+      <DependentUpon>FrmEventReportViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrpRegisteredServiceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpRegisteredServiceReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FrmReportViewer.resx">
+      <DependentUpon>FrmReportViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\CrpRegisteredServiceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpRegisteredServiceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReportViewer.designer.cs">
+      <DependentUpon>FrmReportViewer.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Resources\Chrysanthemum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crm-benefits1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\What-is-Tour-de-Force-CRM.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\11949856271997454136tasto_2_architetto_franc_01.svg.med.png" />
+    <Content Include="Resources\11949856271997454136tasto_2_architetto_franc_01.svg.med1.png" />
+    <Content Include="Resources\13685.png" />
+    <Content Include="Resources\download.jpg" />
+    <Content Include="Resources\images.jpg" />
+    <Content Include="Resources\Plus.png" />
+    <Content Include="Resources\Plus1.png" />
+    <Content Include="Resources\thumb_COLOURBOX7833451.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
